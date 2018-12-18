@@ -192,3 +192,9 @@ io.sockets.on('connection',function(socket){
     })
 })
 
+
+
+// "main": "app.js",
+//     "scripts": {
+//     "start": "electron ."
+// },
