@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PointChat</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet"/>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+            crossorigin="anonymous">
+
+    </script>
+    <script>
+        var $ = jQuery = require("jquery")
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.dev.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="controller.js"></script>
+</head>
+<body>
+<!--Login page-->
+
+<div id="login" class="login page">
+    <div class="form">
+        <i class="fas fa-user-lock"></i>
+        <h3 class="title">Username:</h3>
+        <div>
+        <input class="usernameInput" type="text" maxlength="14" id="name" />
+        </div>
+        <h3 class="title">Password:</h3>
+        <input class="usernameInput" type="password" maxlength="14" id="password" />
+    </div>
+</div>
+
+<!--Chat page-->
+
+<div class="modal__dialog">
+    <div class="modal__close">
+        <a href="#" class="modal__icon">
+            <i class="fa fa-times" aria-hidden="true"></i>
+        </a>
+
+    </div>
+    <div class="modal__content chat">
+        <div class="modal__sidebar">
+            <div class="chat__search search">
+                <div class="search">
+                    <div class="search__icon search__icon_right">
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="chat__users">
+                <ul class="users">
+
+                  <!--Online user info-->
+
+                </ul>
+            </div>
+        </div>
+        <div class="modal__main">
+            <div class="chatbox">
+                <div class="chatbox__row">
+
+                </div>
+                <div class="chatbox__row chatbox__row_fullheight">
+                    <div class="chatbox__content">
+
+                        <!--Messages-->
+
+                    </div>
+                </div>
+                <div class="chatbox__row">
+                    <div class="enter">
+                        <div class="enter__submit">
+                            <button class="button button_id_submit" type="submit">
+                                <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="enter__textarea">
+                            <textarea name="enterMessage" id="enterMessage" cols="30" rows="2" placeholder="Say message..."></textarea>
+                        </div>
+                        <div class="enter__icons">
+                            <a class="enter__icon" href="#" id="sortButton">
+                                <i class="fa fa-paperclip" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Notifications-->
+
+<div id="notifications">
+    <div id="loadingBox" class="notification">
+        <span>Зареждане …</span>
+    </div>
+    <div id="infoBox" class="notification">
+        <span>Info</span>
+    </div>
+    <div id="errorBox" class="notification">
+        <span>Error</span>
+    </div>
+</div>
+
+</body>
+</html>
