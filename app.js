@@ -39,9 +39,10 @@ app.on('ready', () => {
         useContentSize: true,
     });
 
-    mainWindow.loadURL('http://localhost:4000/')
+    mainWindow.loadURL('https://point-chat.herokuapp.com/')
+    // mainWindow.loadURL('http://localhost:4000/')
     // mainWindow.focus();
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
 
     mainWindow.on('closed', () => {
         mainWindow = null
