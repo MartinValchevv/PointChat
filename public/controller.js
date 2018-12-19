@@ -1,7 +1,7 @@
 $(function () {
     // const socket = io.connect('http://localhost:8080')
-    const socket = io('https://point-chat.herokuapp.com/')
-    // const socket = io()
+    // const socket = io('https://point-chat.herokuapp.com/')
+    const socket = io()
     // const socket = io.connect(':80')
     const BASE_URL = 'https://baas.kinvey.com/'
     const APP_KEY = 'kid_ryf9q5EDX'
@@ -9,6 +9,8 @@ $(function () {
     const AUTH_HEADERS = { 'Authorization': "Basic " + btoa(APP_KEY + ":" + APP_SECRET) }
     let currentTime  = new Date().getHours()
     let msgForSort = []
+
+    // "socket.io": "^2.1.1",
 
     let name = $('#name')
     let password = $('#password')
