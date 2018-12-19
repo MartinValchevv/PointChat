@@ -9,7 +9,7 @@ const fs = require('file-system')
 // server.listen(4000)
 // console.log('Listening to request on port 4000')
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 80);
 
 
 // app.listen(process.env.PORT || 3000, function(){
