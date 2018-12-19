@@ -18,6 +18,7 @@ app.listen(process.env.PORT || 4000);
 
 app.use(express.static('public'))
 
+
 let nicknames = []
 let historyArr = []
 
