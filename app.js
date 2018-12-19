@@ -1,7 +1,6 @@
 const express = require('express')
 const app = express()
 const server = require('http').createServer(app)
-app.listen(process.env.PORT || 80);
 const io = require('socket.io').listen(server)
 const fs = require('file-system')
 // const {app, BrowserWindow} = require('electron');
@@ -10,7 +9,7 @@ const fs = require('file-system')
 // server.listen(4000)
 // console.log('Listening to request on port 4000')
 
-// app.listen(process.env.PORT || 80);
+app.listen(process.env.PORT || 3609);
 
 
 // app.listen(process.env.PORT || 3000, function(){
