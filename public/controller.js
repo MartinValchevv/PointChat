@@ -1,8 +1,6 @@
 $(function () {
     // const socket = io.connect('http://localhost:4000')
     const socket = io('https://point-chat.herokuapp.com')
-    // const socket = io('https://point-chat.herokuapp.com?id=2')
-    // const socket = io.connect(':80')
     const BASE_URL = 'https://baas.kinvey.com/'
     const APP_KEY = 'kid_ryf9q5EDX'
     const APP_SECRET = '9d1ba889d20143d5981a227bc581aeb7'
@@ -10,7 +8,6 @@ $(function () {
     let currentTime  = new Date().getHours()
     let msgForSort = []
 
-    // "socket.io": "^2.1.1",
 
     let name = $('#name')
     let password = $('#password')
