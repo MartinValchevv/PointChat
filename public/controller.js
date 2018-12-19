@@ -1,6 +1,6 @@
 $(function () {
     // const socket = io.connect('http://localhost:8080')
-    const socket = io('https://point-chat.herokuapp.com:4000')
+    const socket = io('https://point-chat.herokuapp.com/')
     // const socket = io()
     // const socket = io.connect(':80')
     const BASE_URL = 'https://baas.kinvey.com/'
