@@ -3,15 +3,13 @@ const app = express()
 const server = require('http').createServer(app)
 const io = require('socket.io').listen(server)
 const fs = require('file-system')
-io.set("transports", ["xhr-polling"]);
-io.set("polling duration", 10);
 // const {app, BrowserWindow} = require('electron');
 
 
 // server.listen(4000)
 // console.log('Listening to request on port 4000')
 
-app.listen(process.env.PORT || 3609);
+app.listen(process.env.PORT || 4000);
 
 
 // app.listen(process.env.PORT || 3000, function(){
