@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const server = require('http').createServer(app)
+app.listen(process.env.PORT || 80);
 const io = require('socket.io').listen(server)
 const fs = require('file-system')
 // const {app, BrowserWindow} = require('electron');
