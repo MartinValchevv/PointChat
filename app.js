@@ -7,14 +7,11 @@ const fs = require('file-system')
 
 
 // server.listen(4000)
+server.listen(process.env.PORT || 4000)
 console.log('Listening to request on port 4000')
 
-app.listen(process.env.PORT || 4000);
 
 
-// app.listen(process.env.PORT || 3000, function(){
-//     console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-// });
 
 app.use(express.static('public'))
 
