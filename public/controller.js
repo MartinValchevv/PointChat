@@ -3,7 +3,8 @@ $(function () {
     // const socket = io.connect('https://point-chat.herokuapp.com/')
     // const socket = io.connect()
     var host = location.origin;
-    io.connect(host, {port: Number(process.env.PORT || 4000), transports: ["websocket"]});
+    let port = Number(process.env.PORT || 4000)
+    io.connect(host, {port: port, transports: ["websocket"]});
     const BASE_URL = 'https://baas.kinvey.com/'
     const APP_KEY = 'kid_ryf9q5EDX'
     const APP_SECRET = '9d1ba889d20143d5981a227bc581aeb7'
