@@ -49,6 +49,7 @@ $(function () {
             }).then(function (res) {
                 signInUser(res, 'Успешно влизане.')
                 socket.emit('new user', { name: res.name, avatar: res.avatar }, function(data) {
+                    console.log(res.name)
                     if (data) {
                         $('#login').hide(500);
                         $('.modal__dialog').show()

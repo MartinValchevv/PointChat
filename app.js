@@ -4,7 +4,6 @@ const server = require('http').createServer(app)
 const io = require('socket.io').listen(server)
 const fs = require('file-system')
 
-// server.listen(4000)
 server.listen(process.env.PORT || 4000)
 console.log('Listening to request on port 4000')
 
