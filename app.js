@@ -59,6 +59,17 @@ io.sockets.on('connection',function(socket){
            callback(true)
            socket.nickname = data
            nicknames.push(socket.nickname)
+           let countUser = 0
+            for (let i = 0; i < nicknames.length; i++) {
+               if (nicknames[i].name === socket.nickname.name) {
+                   countUser++
+               }
+               if (countUser > 1) {
+                   nicknames.splice(nicknames[i], 1)
+                   io.sockets.emit('reset form')
+                   break
+               }
+            }
            io.sockets.emit('usernames', nicknames)
        }
     })

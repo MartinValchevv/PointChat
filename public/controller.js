@@ -47,9 +47,16 @@ $(function () {
                 headers: AUTH_HEADERS,
                 data: { username, password }
             }).then(function (res) {
+                socket.on('reset form', function () {
+                    $('.modal__dialog').hide()
+                    $('#login').show(500);
+                    $('#login').fadeIn();
+                    $('#name').val('')
+                    $('#password').val('')
+                    $('#name').focus()
+                })
                 signInUser(res, 'Успешно влизане.')
-                socket.emit('new user', { name: res.name, avatar: res.avatar }, function(data) {
-                    console.log(res.name)
+                socket.emit('new user', {name: res.name, avatar: res.avatar}, function (data) {
                     if (data) {
                         $('#login').hide(500);
                         $('.modal__dialog').show()
