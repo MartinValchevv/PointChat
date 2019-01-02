@@ -8,7 +8,6 @@ $(function () {
     let currentTime  = new Date().getHours()
     let msgForSort = []
 
-
     let name = $('#name')
     let password = $('#password')
     let btnSend = $('.enter__submit')
@@ -37,6 +36,7 @@ $(function () {
             loginUser()
         }
     })
+    
     function loginUser() {
         let username = $('#name').val()
         let password = $('#password').val()
@@ -67,6 +67,7 @@ $(function () {
             }).catch(handleAjaxError)
         }
     }
+
     message.on('keypress', function (e) {
         if (e.keyCode === 13 ) {
             if (this.value.trim().length > 0) {
@@ -121,7 +122,7 @@ $(function () {
         })
     })
     socket.on('new message',function(data){
-        output.append(` <div class="message">
+            output.append(` <div class="message">
                             <div class="message__head">
                                 <span class="message__note">${data.user}</span>
                                 <span class="message__note">${data.date}</span>
@@ -137,7 +138,7 @@ $(function () {
                                 </div>
                             </div>
                         </div>`);
-        $('.chatbox__row_fullheight').stop().animate({scrollTop: $('.chatbox__row_fullheight')[0].scrollHeight}, 1000)
+            $('.chatbox__row_fullheight').stop().animate({scrollTop: $('.chatbox__row_fullheight')[0].scrollHeight}, 1000)
     })
     socket.on('usernames',function(data){
         $('.users').empty()
@@ -149,7 +150,6 @@ $(function () {
                             </a>
                         </div>
                         <span class="users__note">${obj.name}</span>
-
                     </li>`
             $('.users').append(user)
         }

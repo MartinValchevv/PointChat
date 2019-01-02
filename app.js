@@ -13,7 +13,6 @@ app.use(express.static('public'))
 let nicknames = []
 let historyArr = []
 
-
 function zero(num) {
     return ('0' + num).slice(-2);
 }
@@ -53,20 +52,20 @@ setInterval(function () {
 io.sockets.on('connection',function(socket){
     console.log('connection ', socket.id)
     socket.on('new user', function (data, callback) {
-       if (nicknames.indexOf(data) !== -1){
+        if (nicknames.indexOf(data) !== -1){
            callback(false)
        } else {
            callback(true)
-           socket.nickname = data
+            socket.nickname = data
            nicknames.push(socket.nickname)
-           let countUser = 0
+            let countUser = 0
             for (let i = 0; i < nicknames.length; i++) {
                if (nicknames[i].name === socket.nickname.name) {
                    countUser++
                }
                if (countUser > 1) {
                    nicknames.splice(nicknames[i], 1)
-                   io.sockets.emit('reset form')
+                   socket.emit('reset form')
                    break
                }
             }

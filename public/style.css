@@ -40,6 +40,14 @@
     width: 400px;
 }
 
+#sortButton > i:hover {
+    color: #4cceea;
+}
+
+div.chat__users > ul > li:hover {
+    background: #4cceea;
+}
+
 #name ~ .focus-border {
     position: absolute;
     bottom: 0;
@@ -563,11 +571,10 @@ button:focus {
 .enter__submit {
     position: absolute;
     top: 35%;
-    right: -12px;
+    right: -5px;
     transform: translateY(-50%);
     width: 38px;
     height: 38px;
-    border: 2px solid #e2e3e7;
     border-radius: 50%;
     background-color: #18191D;
     text-align: center;
@@ -583,6 +590,12 @@ button:focus {
     resize: none;
     background-color: #33393F;
     border-radius: 9px;
+    color: white;
+}
+
+.enter__textarea textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 0px 2px #4cceea;
 }
 
 .enter__icons {
