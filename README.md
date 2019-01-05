@@ -32,9 +32,6 @@ http://point-chat.herokuapp.com/
 
 https://github.com/MartinValchevv/PointChat
 
-## How To Use
-
-
 ## Technologies
 
 JavaScript, jQuery, Express, socket.io, file-system, Kinvey, CSS and HTML
